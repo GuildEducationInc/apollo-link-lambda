@@ -1,0 +1,6 @@
+{
+  "extends": "tslint-config-guild",
+  "linterOptions": {
+    "exclude": ["dist/**/*"]
+  }
+}

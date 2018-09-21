@@ -1,0 +1,35 @@
+{
+  "name": "apollo-link-lambda",
+  "version": "1.0.0",
+  "description": "Apollo transport for directly invoking AWS Lambda functions",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": "https://github.com/GuildEducationInc/apollo-link-lambda.git",
+  "author": "Guild Engineering <engineering@guildeducation.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.11",
+    "prettier": "^1.14.2",
+    "prettier-tslint": "^0.4.0",
+    "rollup": "^0.65.2",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "tslint": "^5.11.0",
+    "tslint-config-guild": "^1.0.0",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "apollo-link": "^1.2.2",
+    "apollo-link-http-common": "^0.2.4",
+    "aws-lambda": "^0.1.2",
+    "aws-sdk": "^2.309.0",
+    "graphql": "^14.0.2"
+  }
+}
