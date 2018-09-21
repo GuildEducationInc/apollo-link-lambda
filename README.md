@@ -6,6 +6,18 @@ The Lambda link is similar in functionality to the [http-link](https://github.co
 
 ### JavaScript
 
+```javascript
+import { LambdaLink } from "apollo-link-lambda";
+
+const options = {
+  functionName: 'MyLambdaFunc'
+  httpMethod: 'GET'
+  invocationType: 'Event'
+};
+const lambdaLink = new LambdaLink(options)
+// Use just like you would an HTTP link
+```
+
 ### TypeScript
 
 ```typescript
@@ -16,4 +28,6 @@ const options: LambdaOptions = {
   httpMethod: 'GET'
   invocationType: 'Event'
 };
+const lambdaLink = new LambdaLink(options)
+// Use just like you would an HTTP link
 ```
