@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      SAM_CLI_TELEMETRY: 0
+      # Don't worry these are fake AWS credentials for AWS SAM
+      AWS_ACCESS_KEY_ID: ABIAZLJNBT8I3KFOU4NO
+      AWS_SECRET_ACCESS_KEY: 4Xt3Rbx4DO21MhK1IHXZXRvVRDuqaQ0Wo5lILA/h
+    steps:
+      - name: Setup Docker
+        uses: docker-practice/actions-setup-docker@master
+      - name: Setup Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Setup AWS SAM
+        run: |
+          brew tap aws/tap
+          brew install aws-sam-cli
+          sam --version
+      - uses: actions/checkout@v2
+      - run: yarn install --frozen-lockfile --check-files
+      - name: Run Test
+        run: yarn test

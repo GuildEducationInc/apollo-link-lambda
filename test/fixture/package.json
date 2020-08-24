@@ -1,0 +1,21 @@
+{
+  "name": "aws-sam-test-fixture",
+  "description": "A simple graphql server test fixture",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "nohoist": [
+      "**"
+    ]
+  },
+  "scripts": {
+    "start-api": "sam local start-api",
+    "start-sdk": "sam local start-lambda"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "^2.16.1",
+    "aws-sdk": "^2.437.0",
+    "graphql": "^14.0.0"
+  },
+  "devDependencies": {}
+}

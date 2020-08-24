@@ -1,0 +1,35 @@
+{
+  "name": "@dealmore/apollo-link-lambda",
+  "version": "3.0.0",
+  "description": "Apollo transport link for directly invoking AWS Lambda functions",
+  "main": "dist/index.js",
+  "module": "dist/apollo-link-lambda.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": "https://github.com/dealmore/apollo-link-lambda.git",
+  "author": {
+    "name": "Felix Haus",
+    "url": "https://dealmore.de"
+  },
+  "contributors": [
+    {
+      "name": "Guild Engineering",
+      "email": "engineering@guildeducation.com"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsdx build --entry index.ts --target node --tsconfig tsconfig.build.json",
+    "prepack": "cp ../README.md ../LICENSE ./",
+    "postpack": "rm ./README.md ./LICENSE"
+  },
+  "peerDependencies": {
+    "@apollo/client": "^3.0.0",
+    "aws-sdk": "^2.721.0",
+    "graphql": "^14.0.0 || ^15.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
