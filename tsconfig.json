@@ -1,12 +1,18 @@
 {
+  "include": ["lib", "test"],
   "compilerOptions": {
+    "module": "esnext",
+    "lib": ["dom", "ES2019"],
+    "importHelpers": true,
     "declaration": true,
-    "declarationDir": "./dist",
-    "module": "ESNext",
-    "noImplicitAny": true,
-    "outDir": "./dist",
-    "target": "ES2017"
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+    "sourceMap": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true
+  }
 }

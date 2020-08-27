@@ -1,35 +1,28 @@
 {
-  "name": "apollo-link-lambda",
-  "version": "1.0.0",
-  "description": "Apollo transport for directly invoking AWS Lambda functions",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/**/*"
-  ],
-  "repository": "https://github.com/GuildEducationInc/apollo-link-lambda.git",
-  "author": "Guild Engineering <engineering@guildeducation.com>",
+  "name": "workspace-root",
+  "version": "0.0.0",
+  "private": true,
   "license": "MIT",
-  "private": false,
+  "workspaces": [
+    "lib",
+    "test/fixture"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "yarn --cwd lib build",
+    "test": "tsdx test"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.11",
-    "prettier": "^1.14.2",
-    "prettier-tslint": "^0.4.0",
-    "rollup": "^0.65.2",
-    "rollup-plugin-typescript2": "^0.17.0",
-    "tslint": "^5.11.0",
-    "tslint-config-guild": "^1.0.0",
-    "typescript": "^3.0.3"
-  },
-  "dependencies": {
-    "apollo-link": "^1.2.2",
-    "apollo-link-http-common": "^0.2.4",
-    "aws-lambda": "^0.1.2",
-    "aws-sdk": "^2.309.0",
-    "graphql": "^14.0.2"
+    "@apollo/client": "^3.0.0",
+    "@types/aws-lambda": "^8.10.61",
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^12.0.0",
+    "aws-sdk": "^2.721.0",
+    "cross-fetch": "^3.0.5",
+    "graphql": "^14.0.0",
+    "husky": "^4.2.5",
+    "react": "^16.13.1",
+    "tsdx": "^0.13.3",
+    "tslib": "^2.0.1",
+    "typescript": "^3.9.0"
   }
 }
