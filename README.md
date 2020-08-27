@@ -7,7 +7,7 @@ Instead of sending the GraphQL request over HTTP and API Gateway to your Lambda 
 
 This reduces the network overhead and costs because the requests are routed inside of AWS rather than over the public internet. Internally it creates an invoke event that has the same schema as an API Gateway proxy event.
 
-![Functionality of the Apollo Link Lambda](./docs/assets/functionality.png)
+![Functionality of the Apollo Link Lambda](https://github.com/dealmore/apollo-link-lambda/blob/main/docs/assets/functionality.png?raw=true)
 
 ## Features
 
